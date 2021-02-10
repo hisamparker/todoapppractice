@@ -66,3 +66,13 @@ function nextTodoId() {
     return document.getElementsByClassName('todo').length + 1;
 }
 
+function cleanUpDoneTodos() {
+    const list = document.getElementById('todolist');
+    const doneItems = document.getElementsByClassName('completed');
+
+    for (let i = doneItems.length; i> 0; i--) {
+        list.removeChild(doneItems[i-1]);
+    }
+
+    updateCounters()
+}
