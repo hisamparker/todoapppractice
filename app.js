@@ -14,3 +14,17 @@ function updateCounters() {
 }
 
 updateCounters()
+
+function toggleDone() {
+    const checkbox = this;
+
+    if (checkbox.checked) {
+        checkbox.parentElement.className = `todo completed`;
+    } else {
+        checkbox.parentElement.className = `todo`;
+    }
+
+    updateCounters()
+}
+
+toggleDone()
