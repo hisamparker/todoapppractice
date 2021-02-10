@@ -24,7 +24,6 @@ function toggleDone() {
         checkbox.parentElement.className = `todo`;
     }
 
-    updateCounters()
+    updateCounters();
 }
 
-toggleDone()
